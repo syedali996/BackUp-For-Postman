@@ -1,0 +1,169 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0",
+    "title": "APIMATIC Calculator",
+    "description": "Simple calculator API hosted on APIMATIC",
+    "contact": {}
+  },
+  "host": "examples.apimatic.io",
+  "basePath": "/apps/calculator",
+  "securityDefinitions": {
+    "basic": {
+      "type": "basic"
+    }
+  },
+  "schemes": [
+    "https"
+  ],
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "paths": {
+    "/{operation}": {
+      "get": {
+        "description": "Calculates the expression using the specified operation.",
+        "summary": "Calculator Endpoint",
+        "tags": [
+          "Simple Calculator"
+        ],
+        "operationId": "CalculatorEndpoint",
+        "deprecated": false,
+        "produces": [
+          "text/plain",
+          "application/json; charset=utf-8"
+        ],
+        "parameters": [
+          {
+            "name": "x",
+            "in": "query",
+            "required": true,
+            "type": "integer",
+            "format": "int32",
+            "description": "The LHS value"
+          },
+          {
+            "name": "y",
+            "in": "query",
+            "required": true,
+            "type": "integer",
+            "format": "int32",
+            "description": "The RHS value"
+          },
+          {
+            "name": "operation",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": "The operator to apply on the variables"
+          },
+          {
+            "name": "Accept",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "integer",
+              "default": "",
+              "format": "int32"
+            },
+            "examples": {
+              "text/plain": 20,
+              "application/json; charset=utf-8": 9
+            },
+            "headers": {
+              "Content-Length": {
+                "type": "string",
+                "default": "122"
+              },
+              "Date": {
+                "type": "string",
+                "default": "Thu, 30 Jun 2022 09:21:03 GMT"
+              },
+              "Server": {
+                "type": "string",
+                "default": "Microsoft-IIS/10.0"
+              },
+              "Cache-Control": {
+                "type": "string",
+                "default": "no-cache"
+              },
+              "Content-Encoding": {
+                "type": "string",
+                "default": "gzip"
+              },
+              "Expires": {
+                "type": "string",
+                "default": "-1"
+              },
+              "Pragma": {
+                "type": "string",
+                "default": "no-cache"
+              },
+              "Set-Cookie": {
+                "type": "string",
+                "default": "ARRAffinity=cd62dbca36a6d36be793b1a4b0778ab43e2aa2e7f3924ad3daee96100e245655;Path=/;HttpOnly;Secure;Domain=examples.apimatic.io"
+              },
+              "Vary": {
+                "type": "string",
+                "default": "Accept-Encoding"
+              },
+              "X-AspNet-Version": {
+                "type": "string",
+                "default": "4.0.30319"
+              },
+              "X-Powered-By": {
+                "type": "string",
+                "default": "ASP.NET"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/62c3d96145256f8079a67f8e": {
+      "get": {
+        "summary": "https://dev.apimatic.io/api/portal-settings/62c3d96145256f8079a67f8d/download/draft/62c3d96145256f8079a67f8e",
+        "tags": [
+          "Misc"
+        ],
+        "operationId": "https://dev.apimatic.io/api/portal-settings/62c3d96145256f8079a67f8d/download/draft/62c3d96145256f8079a67f8e",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "security": [
+          {
+            "basic": []
+          }
+        ]
+      }
+    }
+  },
+  "security": [],
+  "tags": [
+    {
+      "name": "Simple Calculator"
+    },
+    {
+      "name": "Misc",
+      "description": ""
+    }
+  ]
+}
