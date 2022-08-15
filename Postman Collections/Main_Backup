@@ -61,7 +61,7 @@
   "Endpoints": [
     {
       "AuthenticateEndpointWith": [],
-      "Name": "Calculate",
+      "Name": "Calculator Endpoint",
       "Description": "Calculates the expression using the specified operation.",
       "HTTPMethod": "GET",
       "Group": "Simple Calculator",
@@ -535,7 +535,7 @@
       "Errors": [],
       "TestCases": [
         {
-          "Name": "Calculate",
+          "Name": "Calculator Endpoint",
           "Description": "Calculates the expression using the specified operation.",
           "Enabled": true,
           "ShouldPass": true,
@@ -577,7 +577,7 @@
           "ResponseMatchSchema": true
         },
         {
-          "Name": "Calculate1",
+          "Name": "Calculator Endpoint1",
           "Description": "Calculates the expression using the specified operation.",
           "Enabled": true,
           "ShouldPass": true,
@@ -674,7 +674,7 @@
           "ResponseMatchSchema": true
         },
         {
-          "Name": "Calculate2",
+          "Name": "Calculator Endpoint2",
           "Description": "Calculates the expression using the specified operation.",
           "Enabled": true,
           "ShouldPass": true,
