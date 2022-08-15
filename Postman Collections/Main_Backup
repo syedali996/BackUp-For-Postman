@@ -1,0 +1,936 @@
+{
+  "AuthenticateEndpointsWith": [],
+  "Name": "APIMATIC Calculator",
+  "BaseUri": "https://examples.apimatic.io/apps/calculator",
+  "ServerConfiguration": {
+    "UseParent": false,
+    "DefaultEnvironment": "production",
+    "DefaultServer": "Server 1",
+    "Environments": [
+      {
+        "Name": "production",
+        "Servers": [
+          {
+            "Name": "Server 1",
+            "Url": "https://examples.apimatic.io/apps/calculator"
+          },
+          {
+            "Name": "Server 2",
+            "Url": "https://dev.apimatic.io/api/portal-settings/62c3d96145256f8079a67f8d/download/draft"
+          }
+        ]
+      }
+    ],
+    "Parameters": []
+  },
+  "Description": "Simple calculator API hosted on APIMATIC",
+  "Version": "1.0",
+  "Contact": {},
+  "AdditionalHeaders": [],
+  "Authentication": {
+    "Type": "Basic",
+    "AuthType": "Basic",
+    "Parameters": [
+      {
+        "Name": "username",
+        "TestValue": "syed.hasnain@apimatic.io"
+      },
+      {
+        "Name": "password",
+        "TestValue": "Hello@123"
+      }
+    ],
+    "Scopes": [],
+    "ParamFormats": {}
+  },
+  "AuthenticationSchemes": {
+    "basic": {
+      "AuthenticationType": "Basic",
+      "Parameters": [
+        {
+          "Name": "username",
+          "TestValue": "syed.hasnain@apimatic.io"
+        },
+        {
+          "Name": "password",
+          "TestValue": "Hello@123"
+        }
+      ]
+    }
+  },
+  "Endpoints": [
+    {
+      "AuthenticateEndpointWith": [],
+      "Name": "Calculate",
+      "Description": "Calculates the expression using the specified operation.",
+      "HTTPMethod": "GET",
+      "Group": "Simple Calculator",
+      "RequiresAuthentication": true,
+      "Server": "Server 1",
+      "Route": "/{operation}",
+      "Responses": {
+        "200": {
+          "Name": "Response_200",
+          "Description": "",
+          "Headers": [
+            {
+              "Optional": false,
+              "AnyOfTypes": [],
+              "AnyOfCasesMeta": [],
+              "OneOfTypes": [],
+              "OneOfCasesMeta": [],
+              "NotTypes": [],
+              "NotCasesMeta": [],
+              "Type": "String",
+              "Constant": false,
+              "IsStream": false,
+              "IsAttribute": false,
+              "Examples": [],
+              "Nullable": false,
+              "ReadOnly": false,
+              "WriteOnly": false,
+              "IsArray": false,
+              "IsMap": false,
+              "IsArrayOfMap": false,
+              "Deprecated": false,
+              "Name": "Content-Length",
+              "DefaultValue": "122"
+            },
+            {
+              "Optional": false,
+              "AnyOfTypes": [],
+              "AnyOfCasesMeta": [],
+              "OneOfTypes": [],
+              "OneOfCasesMeta": [],
+              "NotTypes": [],
+              "NotCasesMeta": [],
+              "Type": "String",
+              "Constant": false,
+              "IsStream": false,
+              "IsAttribute": false,
+              "Examples": [],
+              "Nullable": false,
+              "ReadOnly": false,
+              "WriteOnly": false,
+              "IsArray": false,
+              "IsMap": false,
+              "IsArrayOfMap": false,
+              "Deprecated": false,
+              "Name": "Date",
+              "DefaultValue": "Thu, 30 Jun 2022 09:21:03 GMT"
+            },
+            {
+              "Optional": false,
+              "AnyOfTypes": [],
+              "AnyOfCasesMeta": [],
+              "OneOfTypes": [],
+              "OneOfCasesMeta": [],
+              "NotTypes": [],
+              "NotCasesMeta": [],
+              "Type": "String",
+              "Constant": false,
+              "IsStream": false,
+              "IsAttribute": false,
+              "Examples": [],
+              "Nullable": false,
+              "ReadOnly": false,
+              "WriteOnly": false,
+              "IsArray": false,
+              "IsMap": false,
+              "IsArrayOfMap": false,
+              "Deprecated": false,
+              "Name": "Server",
+              "DefaultValue": "Microsoft-IIS/10.0"
+            },
+            {
+              "Optional": false,
+              "AnyOfTypes": [],
+              "AnyOfCasesMeta": [],
+              "OneOfTypes": [],
+              "OneOfCasesMeta": [],
+              "NotTypes": [],
+              "NotCasesMeta": [],
+              "Type": "String",
+              "Constant": false,
+              "IsStream": false,
+              "IsAttribute": false,
+              "Examples": [],
+              "Nullable": false,
+              "ReadOnly": false,
+              "WriteOnly": false,
+              "IsArray": false,
+              "IsMap": false,
+              "IsArrayOfMap": false,
+              "Deprecated": false,
+              "Name": "Cache-Control",
+              "DefaultValue": "no-cache"
+            },
+            {
+              "Optional": false,
+              "AnyOfTypes": [],
+              "AnyOfCasesMeta": [],
+              "OneOfTypes": [],
+              "OneOfCasesMeta": [],
+              "NotTypes": [],
+              "NotCasesMeta": [],
+              "Type": "String",
+              "Constant": false,
+              "IsStream": false,
+              "IsAttribute": false,
+              "Examples": [],
+              "Nullable": false,
+              "ReadOnly": false,
+              "WriteOnly": false,
+              "IsArray": false,
+              "IsMap": false,
+              "IsArrayOfMap": false,
+              "Deprecated": false,
+              "Name": "Content-Encoding",
+              "DefaultValue": "gzip"
+            },
+            {
+              "Optional": false,
+              "AnyOfTypes": [],
+              "AnyOfCasesMeta": [],
+              "OneOfTypes": [],
+              "OneOfCasesMeta": [],
+              "NotTypes": [],
+              "NotCasesMeta": [],
+              "Type": "String",
+              "Constant": false,
+              "IsStream": false,
+              "IsAttribute": false,
+              "Examples": [],
+              "Nullable": false,
+              "ReadOnly": false,
+              "WriteOnly": false,
+              "IsArray": false,
+              "IsMap": false,
+              "IsArrayOfMap": false,
+              "Deprecated": false,
+              "Name": "Expires",
+              "DefaultValue": "-1"
+            },
+            {
+              "Optional": false,
+              "AnyOfTypes": [],
+              "AnyOfCasesMeta": [],
+              "OneOfTypes": [],
+              "OneOfCasesMeta": [],
+              "NotTypes": [],
+              "NotCasesMeta": [],
+              "Type": "String",
+              "Constant": false,
+              "IsStream": false,
+              "IsAttribute": false,
+              "Examples": [],
+              "Nullable": false,
+              "ReadOnly": false,
+              "WriteOnly": false,
+              "IsArray": false,
+              "IsMap": false,
+              "IsArrayOfMap": false,
+              "Deprecated": false,
+              "Name": "Pragma",
+              "DefaultValue": "no-cache"
+            },
+            {
+              "Optional": false,
+              "AnyOfTypes": [],
+              "AnyOfCasesMeta": [],
+              "OneOfTypes": [],
+              "OneOfCasesMeta": [],
+              "NotTypes": [],
+              "NotCasesMeta": [],
+              "Type": "String",
+              "Constant": false,
+              "IsStream": false,
+              "IsAttribute": false,
+              "Examples": [],
+              "Nullable": false,
+              "ReadOnly": false,
+              "WriteOnly": false,
+              "IsArray": false,
+              "IsMap": false,
+              "IsArrayOfMap": false,
+              "Deprecated": false,
+              "Name": "Set-Cookie",
+              "DefaultValue": "ARRAffinity=cd62dbca36a6d36be793b1a4b0778ab43e2aa2e7f3924ad3daee96100e245655;Path=/;HttpOnly;Secure;Domain=examples.apimatic.io"
+            },
+            {
+              "Optional": false,
+              "AnyOfTypes": [],
+              "AnyOfCasesMeta": [],
+              "OneOfTypes": [],
+              "OneOfCasesMeta": [],
+              "NotTypes": [],
+              "NotCasesMeta": [],
+              "Type": "String",
+              "Constant": false,
+              "IsStream": false,
+              "IsAttribute": false,
+              "Examples": [],
+              "Nullable": false,
+              "ReadOnly": false,
+              "WriteOnly": false,
+              "IsArray": false,
+              "IsMap": false,
+              "IsArrayOfMap": false,
+              "Deprecated": false,
+              "Name": "Vary",
+              "DefaultValue": "Accept-Encoding"
+            },
+            {
+              "Optional": false,
+              "AnyOfTypes": [],
+              "AnyOfCasesMeta": [],
+              "OneOfTypes": [],
+              "OneOfCasesMeta": [],
+              "NotTypes": [],
+              "NotCasesMeta": [],
+              "Type": "String",
+              "Constant": false,
+              "IsStream": false,
+              "IsAttribute": false,
+              "Examples": [],
+              "Nullable": false,
+              "ReadOnly": false,
+              "WriteOnly": false,
+              "IsArray": false,
+              "IsMap": false,
+              "IsArrayOfMap": false,
+              "Deprecated": false,
+              "Name": "X-AspNet-Version",
+              "DefaultValue": "4.0.30319"
+            },
+            {
+              "Optional": false,
+              "AnyOfTypes": [],
+              "AnyOfCasesMeta": [],
+              "OneOfTypes": [],
+              "OneOfCasesMeta": [],
+              "NotTypes": [],
+              "NotCasesMeta": [],
+              "Type": "String",
+              "Constant": false,
+              "IsStream": false,
+              "IsAttribute": false,
+              "Examples": [],
+              "Nullable": false,
+              "ReadOnly": false,
+              "WriteOnly": false,
+              "IsArray": false,
+              "IsMap": false,
+              "IsArrayOfMap": false,
+              "Deprecated": false,
+              "Name": "X-Powered-By",
+              "DefaultValue": "ASP.NET"
+            }
+          ],
+          "BodyContent": {
+            "text/plain": {
+              "AnyOfTypes": [],
+              "AnyOfCasesMeta": [],
+              "OneOfTypes": [],
+              "OneOfCasesMeta": [],
+              "NotTypes": [],
+              "NotCasesMeta": [],
+              "Type": "Number",
+              "IsSdlNativeType": true,
+              "Constant": false,
+              "DefaultValue": "",
+              "Example": "20",
+              "Examples": [],
+              "Nullable": false,
+              "IsArray": false,
+              "IsMap": false,
+              "IsArrayOfMap": false
+            },
+            "application/json; charset=utf-8": {
+              "AnyOfTypes": [],
+              "AnyOfCasesMeta": [],
+              "OneOfTypes": [],
+              "OneOfCasesMeta": [],
+              "NotTypes": [],
+              "NotCasesMeta": [],
+              "Type": "Number",
+              "IsSdlNativeType": true,
+              "Constant": false,
+              "DefaultValue": "",
+              "Example": "9",
+              "Examples": [],
+              "Nullable": false,
+              "IsArray": false,
+              "IsMap": false,
+              "IsArrayOfMap": false
+            }
+          }
+        }
+      },
+      "Response": {
+        "Optional": false,
+        "AnyOfTypes": [],
+        "AnyOfCasesMeta": [],
+        "OneOfTypes": [],
+        "OneOfCasesMeta": [],
+        "NotTypes": [],
+        "NotCasesMeta": [],
+        "Type": "Number",
+        "IsSdlNativeType": true,
+        "Constant": false,
+        "IsStream": false,
+        "IsAttribute": false,
+        "Example": "20",
+        "Examples": [],
+        "Nullable": false,
+        "ReadOnly": false,
+        "WriteOnly": false,
+        "IsArray": false,
+        "IsMap": false,
+        "IsArrayOfMap": false,
+        "Deprecated": false,
+        "Name": "Response_200",
+        "DefaultValue": ""
+      },
+      "ResponseCode": 200,
+      "ResponseHeaders": [
+        {
+          "Optional": false,
+          "AnyOfTypes": [],
+          "AnyOfCasesMeta": [],
+          "OneOfTypes": [],
+          "OneOfCasesMeta": [],
+          "NotTypes": [],
+          "NotCasesMeta": [],
+          "Type": "String",
+          "Constant": false,
+          "IsStream": false,
+          "IsAttribute": false,
+          "Examples": [],
+          "Nullable": false,
+          "ReadOnly": false,
+          "WriteOnly": false,
+          "IsArray": false,
+          "IsMap": false,
+          "IsArrayOfMap": false,
+          "Deprecated": false,
+          "Name": "Content-Type",
+          "DefaultValue": "text/plain"
+        }
+      ],
+      "ResponseContentType": "text/plain",
+      "HasOptionalQueryParams": false,
+      "HasOptionalFieldParams": false,
+      "CollectParameters": false,
+      "Parameters": [
+        {
+          "ParamFormat": "Query",
+          "Optional": false,
+          "AnyOfTypes": [],
+          "AnyOfCasesMeta": [],
+          "OneOfTypes": [],
+          "OneOfCasesMeta": [],
+          "NotTypes": [],
+          "NotCasesMeta": [],
+          "Type": "Number",
+          "IsSdlNativeType": true,
+          "Constant": false,
+          "IsStream": false,
+          "IsAttribute": false,
+          "Example": "4",
+          "Examples": [],
+          "Nullable": false,
+          "ReadOnly": false,
+          "WriteOnly": false,
+          "IsArray": false,
+          "IsMap": false,
+          "IsArrayOfMap": false,
+          "Deprecated": false,
+          "Name": "x",
+          "Description": "The LHS value",
+          "DefaultValue": ""
+        },
+        {
+          "ParamFormat": "Query",
+          "Optional": false,
+          "AnyOfTypes": [],
+          "AnyOfCasesMeta": [],
+          "OneOfTypes": [],
+          "OneOfCasesMeta": [],
+          "NotTypes": [],
+          "NotCasesMeta": [],
+          "Type": "Number",
+          "IsSdlNativeType": true,
+          "Constant": false,
+          "IsStream": false,
+          "IsAttribute": false,
+          "Example": "4",
+          "Examples": [],
+          "Nullable": false,
+          "ReadOnly": false,
+          "WriteOnly": false,
+          "IsArray": false,
+          "IsMap": false,
+          "IsArrayOfMap": false,
+          "Deprecated": false,
+          "Name": "y",
+          "Description": "The RHS value",
+          "DefaultValue": ""
+        },
+        {
+          "ParamFormat": "Template",
+          "Optional": false,
+          "AnyOfTypes": [],
+          "AnyOfCasesMeta": [],
+          "OneOfTypes": [],
+          "OneOfCasesMeta": [],
+          "NotTypes": [],
+          "NotCasesMeta": [],
+          "Type": "String",
+          "IsSdlNativeType": true,
+          "Constant": false,
+          "IsStream": false,
+          "IsAttribute": false,
+          "Example": "SUM",
+          "Examples": [],
+          "Nullable": false,
+          "ReadOnly": false,
+          "WriteOnly": false,
+          "IsArray": false,
+          "IsMap": false,
+          "IsArrayOfMap": false,
+          "Deprecated": false,
+          "Name": "operation",
+          "Description": "The operator to apply on the variables",
+          "DefaultValue": ""
+        },
+        {
+          "ParamFormat": "Header",
+          "Optional": false,
+          "AnyOfTypes": [],
+          "AnyOfCasesMeta": [],
+          "OneOfTypes": [],
+          "OneOfCasesMeta": [],
+          "NotTypes": [],
+          "NotCasesMeta": [],
+          "Type": "String",
+          "IsSdlNativeType": true,
+          "Constant": false,
+          "IsStream": false,
+          "IsAttribute": false,
+          "Example": "text/plain",
+          "Examples": [],
+          "Nullable": false,
+          "ReadOnly": false,
+          "WriteOnly": false,
+          "IsArray": false,
+          "IsMap": false,
+          "IsArrayOfMap": false,
+          "Deprecated": false,
+          "Name": "Accept",
+          "Description": "",
+          "DefaultValue": ""
+        }
+      ],
+      "Errors": [],
+      "TestCases": [
+        {
+          "Name": "Calculate",
+          "Description": "Calculates the expression using the specified operation.",
+          "Enabled": true,
+          "ShouldPass": true,
+          "InputParameters": [
+            {
+              "IsNull": false,
+              "Name": "x",
+              "Value": "4"
+            },
+            {
+              "IsNull": false,
+              "Name": "y",
+              "Value": "4"
+            },
+            {
+              "IsNull": false,
+              "Name": "operation",
+              "Value": "SUM"
+            },
+            {
+              "IsNull": false,
+              "Name": "Accept",
+              "Value": "text/plain"
+            }
+          ],
+          "ExpectedStatus": "200",
+          "ExpectedHeaders": [
+            {
+              "CheckValue": false,
+              "Name": "Content-Type",
+              "Value": "text/plain"
+            }
+          ],
+          "ExpectedHeadersAllowExtra": true,
+          "ExpectedBody": "20",
+          "ExpectedBodyMatchMode": "RAW",
+          "ExpectedArrayOrderedMatching": false,
+          "ExpectedArrayCheckCount": false,
+          "ResponseMatchSchema": true
+        },
+        {
+          "Name": "Calculate1",
+          "Description": "Calculates the expression using the specified operation.",
+          "Enabled": true,
+          "ShouldPass": true,
+          "InputParameters": [
+            {
+              "IsNull": false,
+              "Name": "x",
+              "Value": "4"
+            },
+            {
+              "IsNull": false,
+              "Name": "y",
+              "Value": "4"
+            },
+            {
+              "IsNull": false,
+              "Name": "operation",
+              "Value": "SUM"
+            },
+            {
+              "IsNull": false,
+              "Name": "Accept",
+              "Value": "text/plain"
+            }
+          ],
+          "ExpectedStatus": "200",
+          "ExpectedHeaders": [
+            {
+              "CheckValue": false,
+              "Name": "Content-Type",
+              "Value": "application/json; charset=utf-8"
+            },
+            {
+              "CheckValue": false,
+              "Name": "Content-Length",
+              "Value": "122"
+            },
+            {
+              "CheckValue": false,
+              "Name": "Date",
+              "Value": "Thu, 30 Jun 2022 09:21:03 GMT"
+            },
+            {
+              "CheckValue": false,
+              "Name": "Server",
+              "Value": "Microsoft-IIS/10.0"
+            },
+            {
+              "CheckValue": false,
+              "Name": "Cache-Control",
+              "Value": "no-cache"
+            },
+            {
+              "CheckValue": false,
+              "Name": "Content-Encoding",
+              "Value": "gzip"
+            },
+            {
+              "CheckValue": false,
+              "Name": "Expires",
+              "Value": "-1"
+            },
+            {
+              "CheckValue": false,
+              "Name": "Pragma",
+              "Value": "no-cache"
+            },
+            {
+              "CheckValue": false,
+              "Name": "Set-Cookie",
+              "Value": "ARRAffinity=cd62dbca36a6d36be793b1a4b0778ab43e2aa2e7f3924ad3daee96100e245655;Path=/;HttpOnly;Secure;Domain=examples.apimatic.io"
+            },
+            {
+              "CheckValue": false,
+              "Name": "Vary",
+              "Value": "Accept-Encoding"
+            },
+            {
+              "CheckValue": false,
+              "Name": "X-AspNet-Version",
+              "Value": "4.0.30319"
+            },
+            {
+              "CheckValue": false,
+              "Name": "X-Powered-By",
+              "Value": "ASP.NET"
+            }
+          ],
+          "ExpectedHeadersAllowExtra": true,
+          "ExpectedBody": "9",
+          "ExpectedBodyMatchMode": "RAW",
+          "ExpectedArrayOrderedMatching": false,
+          "ExpectedArrayCheckCount": false,
+          "ResponseMatchSchema": true
+        },
+        {
+          "Name": "Calculate2",
+          "Description": "Calculates the expression using the specified operation.",
+          "Enabled": true,
+          "ShouldPass": true,
+          "InputParameters": [
+            {
+              "IsNull": false,
+              "Name": "x",
+              "Value": "4"
+            },
+            {
+              "IsNull": false,
+              "Name": "y",
+              "Value": "4"
+            },
+            {
+              "IsNull": false,
+              "Name": "operation",
+              "Value": "SUM"
+            },
+            {
+              "IsNull": false,
+              "Name": "Accept",
+              "Value": "text/plain"
+            }
+          ],
+          "ExpectedStatus": "200",
+          "ExpectedHeaders": [
+            {
+              "CheckValue": false,
+              "Name": "Content-Type",
+              "Value": "text/plain"
+            }
+          ],
+          "ExpectedHeadersAllowExtra": true,
+          "ExpectedBody": "20",
+          "ExpectedBodyMatchMode": "RAW",
+          "ExpectedArrayOrderedMatching": false,
+          "ExpectedArrayCheckCount": false,
+          "ResponseMatchSchema": true
+        }
+      ],
+      "WrapBodyInObject": false,
+      "Deprecated": false,
+      "XmlRequest": false,
+      "XmlResponse": false
+    },
+    {
+      "AuthenticateEndpointWith": [
+        {
+          "AuthenticationToApply": {
+            "AuthenticationSchemeName": "basic",
+            "RequiredScopes": []
+          },
+          "OptionType": "Single",
+          "Description": ""
+        }
+      ],
+      "Name": "https://dev.apimatic.io/api/portal-settings/62c3d96145256f8079a67f8d/download/draft/62c3d96145256f8079a67f8e",
+      "HTTPMethod": "GET",
+      "Group": "Misc",
+      "RequiresAuthentication": true,
+      "Server": "Server 2",
+      "Route": "/62c3d96145256f8079a67f8e",
+      "Responses": {},
+      "Response": {
+        "Optional": false,
+        "AnyOfTypes": [],
+        "AnyOfCasesMeta": [],
+        "OneOfTypes": [],
+        "OneOfCasesMeta": [],
+        "NotTypes": [],
+        "NotCasesMeta": [],
+        "Type": "Void",
+        "IsSdlNativeType": true,
+        "Constant": false,
+        "IsStream": false,
+        "IsAttribute": false,
+        "Examples": [],
+        "Nullable": false,
+        "ReadOnly": false,
+        "WriteOnly": false,
+        "IsArray": false,
+        "IsMap": false,
+        "IsArrayOfMap": false,
+        "Deprecated": false,
+        "Name": "Response",
+        "DefaultValue": ""
+      },
+      "HasOptionalQueryParams": false,
+      "HasOptionalFieldParams": false,
+      "CollectParameters": false,
+      "RequiredScopes": [],
+      "Parameters": [],
+      "Errors": [],
+      "TestCases": [
+        {
+          "Name": "https://dev.apimatic.io/api/portal-settings/62c3d96145256f8079a67f8d/download/draft/62c3d96145256f8079a67f8e",
+          "Enabled": true,
+          "ShouldPass": true,
+          "InputParameters": [],
+          "ExpectedStatus": "200",
+          "ExpectedHeaders": [],
+          "ExpectedHeadersAllowExtra": true,
+          "ExpectedBodyMatchMode": "NONE",
+          "ExpectedArrayOrderedMatching": false,
+          "ExpectedArrayCheckCount": false,
+          "ResponseMatchSchema": true
+        }
+      ],
+      "WrapBodyInObject": false,
+      "Deprecated": false,
+      "XmlRequest": false,
+      "XmlResponse": false
+    }
+  ],
+  "EndpointGroups": [
+    {
+      "Name": "Simple Calculator"
+    },
+    {
+      "Name": "Misc",
+      "Description": ""
+    }
+  ],
+  "CustomTypes": [],
+  "UserDefinedImportedTypes": [],
+  "GlobalTypeCombinators": {},
+  "CodeGenSettings": {
+    "SynchronyMode": "Asynchronous",
+    "ModelSerializationScheme": "Json",
+    "ArraySerialization": "Indexed",
+    "Nullify404": false,
+    "UseHttpMethodPrefix": false,
+    "UseModelPrefix": false,
+    "UseExceptionPrefix": true,
+    "UseEnumPrefix": true,
+    "UseControllerPrefix": true,
+    "UseConstructorsForConfig": false,
+    "Timeout": 0.0,
+    "AndroidUseAppManifest": false,
+    "iOSUseAppInfoPlist": false,
+    "iOSGenerateCoreData": false,
+    "CollapseParamsToArray": false,
+    "RunscopeEnabled": false,
+    "AndroidHttpClient": "ANDROID_OK",
+    "JavaHttpClient": "JAVA_OK",
+    "ObjCHttpClient": "UNIREST",
+    "CSharpHttpClient": "UNIREST",
+    "NodeHttpClient": "NODE_REQUEST",
+    "JavaUsePropertiesConfig": false,
+    "PHPHttpClient": "UNIREST",
+    "EnablePHPComposerVersionString": false,
+    "EnableGlobalUserAgent": true,
+    "EnableAdditionalModelProperties": false,
+    "PreserveParameterOrder": true,
+    "ValidateRequiredParameters": false,
+    "AppendContentHeaders": true,
+    "GenerateInterfaces": false,
+    "UseCommonSDKLibrary": false,
+    "ParameterArrayFormat": "ParamArrayWithIndex",
+    "SecurityProtocols": [
+      "Ssl3",
+      "Tls"
+    ],
+    "GenerateTravisConfig": false,
+    "GenerateCircleConfig": false,
+    "GenerateAppveyorConfig": false,
+    "GenerateJenkinsConfig": false,
+    "EnableLogging": false,
+    "EnableHttpCache": false,
+    "Retries": 0,
+    "RetryInterval": 1.0,
+    "BackoffFactor": 2.0,
+    "StatusCodesToRetry": [
+      408,
+      413,
+      429,
+      500,
+      502,
+      503,
+      504,
+      521,
+      522,
+      524
+    ],
+    "RequestMethodsToRetry": [
+      "GET",
+      "PUT"
+    ],
+    "UserConfigurableRetries": true,
+    "GenerateAdvancedDocs": true,
+    "DisableDocs": false,
+    "StoreTimezoneInformation": false,
+    "UnderscoreNumbers": true,
+    "UseSingletonPattern": true,
+    "IgnoreIfNullJson": false,
+    "DisableLinting": false,
+    "SortResources": false,
+    "LiftParameterDescriptionFromCustomType": false,
+    "AllowSkippingSSLCertVerification": false,
+    "ApplyCustomizations": [],
+    "DoNotSplitWords": [],
+    "ReturnCompleteHttpResponse": false,
+    "ThrowForHttpErrorStatusCodes": true,
+    "GenerateModels": true,
+    "GenerateEnums": true,
+    "GenerateExceptions": true,
+    "ResponseMapping": {
+      "Type": "Simple"
+    },
+    "ForceKeywordArgsInRuby": false,
+    "SymbolizeHashKeysInRuby": false,
+    "UsageExampleEndpoint": {
+      "Description": "",
+      "EndpointGroupName": "",
+      "EndpointName": ""
+    },
+    "IsLatestVersion": false,
+    "CustomDependencies": [],
+    "EnableImmutableModels": false,
+    "UseEndpointMethodName": false,
+    "EncodeTemplateParameters": true,
+    "GenerateExamplesForOptionalFields": false,
+    "MultitargetDotnetVersions": false,
+    "BackoffMax": 0.0,
+    "RetryOnTimeout": true,
+    "EnableCookies": false,
+    "EnableJsonPassThroughForAny": false,
+    "PascalCaseEnumForCSharp": false,
+    "PascalCaseEnumForTypeScript": false
+  },
+  "Errors": [],
+  "TestGenSettings": {
+    "Configuration": {},
+    "TestTimeout": 30,
+    "PrecisionDelta": 0.01
+  },
+  "Roles": [],
+  "Namespaces": [],
+  "ExportSettings": {
+    "ExportExtensions": false,
+    "UseDateTimeOnlyInRaml": false,
+    "SetPostmanParamValuesAsVariables": false,
+    "WrapResponseFieldInWsdl": true,
+    "AllowEmptyTypeAttributesInXsd": false,
+    "WrapInputOutputTypesInElementInXsd": false,
+    "AddRefSiblingDataInAllOfSchema": false,
+    "EncodeUrlParamsInPostman": true,
+    "UseXsdBase64BinaryType": false,
+    "ExportXmlMetaData": true,
+    "ExportDiscriminatorMappingValues": true,
+    "ExportGlobalTypeCombinators": true,
+    "ExportAnyType": true,
+    "ExportOptionalParametersAsDisabled": false,
+    "ExportApiKeyAuthInPostman": true,
+    "GenerateSampleValueFromRegexPattern": false,
+    "UseHttpMethodPrefixForAutoGeneratedWsdlNames": true
+  }
+}
